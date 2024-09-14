@@ -1,0 +1,588 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/6.png" type="Texture" id=1]
+[ext_resource path="res://assets/baju adat no bg/aesan_gede__sumsel_-removebg-preview__1_-removebg-preview.png" type="Texture" id=2]
+[ext_resource path="res://Level/TombolPopUp.tres" type="StyleBox" id=3]
+[ext_resource path="res://Level/VBoxBaju1.gd" type="Script" id=4]
+[ext_resource path="res://assets/baju adat no bg/bagasi__kalteng_-removebg-preview-removebg-preview.png" type="Texture" id=5]
+[ext_resource path="res://assets/baju adat no bg/belanga__kepri_-removebg-preview-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://assets/Wood and Paper UI/Sliders/2.png" type="Texture" id=7]
+[ext_resource path="res://assets/baju adat no bg/betawi__jakarta_-removebg-preview.png" type="Texture" id=8]
+[ext_resource path="res://assets/baju adat no bg/bodo__sulawesi_selatan_-removebg-preview-removebg-preview.png" type="Texture" id=9]
+[ext_resource path="res://assets/baju adat no bg/babung__sulawesi_tenggara_-removebg-preview-removebg-preview.png" type="Texture" id=10]
+[ext_resource path="res://assets/baju adat no bg/bodo__sulawesi_bar_-removebg-preview-removebg-preview.png" type="Texture" id=11]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/1.png" type="Texture" id=12]
+[ext_resource path="res://assets/baju adat no bg/baduy__banten_-removebg-preview__1_-removebg-preview.png" type="Texture" id=13]
+[ext_resource path="res://assets/baju adat no bg/cele__maluku_-removebg-preview.png" type="Texture" id=14]
+[ext_resource path="res://assets/baju adat no bg/bundo_kanduang__sumatera_barat_-removebg-preview-removebg-preview.png" type="Texture" id=15]
+[ext_resource path="res://assets/baju adat no bg/bagajah__kalsel_-removebg-preview-removebg-preview.png" type="Texture" id=16]
+[ext_resource path="res://assets/baju adat no bg/bali-removebg-preview-removebg-preview.png" type="Texture" id=17]
+[ext_resource path="res://Level/Baju1.gd" type="Script" id=18]
+[ext_resource path="res://assets/Pirate Treasure/Gold Coin/Screenshot_2024-05-29_143156-rem.png" type="Texture" id=19]
+[ext_resource path="res://assets/Folks-Normal.ttf" type="DynamicFontData" id=20]
+[ext_resource path="res://Level/png-transparent-padlock-drawing-coloring-book-padlock-rectangle-technic-brand-removebg-preview.png" type="Texture" id=21]
+[ext_resource path="res://assets/Wood and Paper UI/Small Banner/13.png" type="Texture" id=22]
+[ext_resource path="res://assets/Wood and Paper UI/Small Banner/1.png" type="Texture" id=23]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 10, 11, 108, 106 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 10
+font_data = ExtResource( 20 )
+
+[node name="Baju1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 18 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="VBoxBaju1" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 12.0
+margin_right = 26.0
+script = ExtResource( 4 )
+
+[node name="HBoxContainerAchievement" type="HBoxContainer" parent="Panel/VBoxBaju1"]
+margin_right = 366.0
+margin_bottom = 70.0
+
+[node name="Button" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement"]
+margin_right = 70.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="AesanGedeSumsel-removebg-preview1-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button"]
+position = Vector2( 32, 34 )
+scale = Vector2( 0.100701, 0.0836673 )
+texture = ExtResource( 2 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button2" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement"]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BabungSulawesiTenggara-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button2"]
+position = Vector2( 35, 33 )
+scale = Vector2( 0.100701, 0.0836673 )
+texture = ExtResource( 10 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button2"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button2"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button3" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement"]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BaduyBanten-removebg-preview1-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button3"]
+position = Vector2( 35, 35 )
+scale = Vector2( 0.0934369, 0.0889279 )
+texture = ExtResource( 13 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button3"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button3"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button4" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement"]
+margin_left = 222.0
+margin_right = 292.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BagajahKalsel-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button4"]
+position = Vector2( 34, 34 )
+scale = Vector2( 0.0809221, 0.0792683 )
+texture = ExtResource( 16 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button4"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement/Button4"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="HBoxContainerAchievement2" type="HBoxContainer" parent="Panel/VBoxBaju1"]
+margin_top = 74.0
+margin_right = 366.0
+margin_bottom = 144.0
+
+[node name="Button5" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2"]
+margin_right = 70.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BagasiKalteng-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button5"]
+position = Vector2( 35, 33 )
+scale = Vector2( 0.0896739, 0.0862832 )
+texture = ExtResource( 5 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button5"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button5"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button6" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2"]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="Bali-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button6"]
+position = Vector2( 35, 36 )
+scale = Vector2( 0.0973196, 0.0872996 )
+texture = ExtResource( 17 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button6"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button6"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button7" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2"]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BelangaKepri-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button7"]
+position = Vector2( 35, 34 )
+scale = Vector2( 0.0837114, 0.0841611 )
+texture = ExtResource( 6 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button7"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button7"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button8" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2"]
+margin_left = 222.0
+margin_right = 292.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BetawiJakarta-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button8"]
+position = Vector2( 35, 34 )
+scale = Vector2( 0.1155, 0.096 )
+texture = ExtResource( 8 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button8"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement2/Button8"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="HBoxContainerAchievement3" type="HBoxContainer" parent="Panel/VBoxBaju1"]
+margin_top = 148.0
+margin_right = 366.0
+margin_bottom = 218.0
+
+[node name="Button9" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3"]
+margin_right = 70.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BodoSulawesiBar-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button9"]
+position = Vector2( 35, 32 )
+scale = Vector2( 0.0945455, 0.0907837 )
+texture = ExtResource( 11 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button9"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button9"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button10" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3"]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BodoSulawesiSelatan-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button10"]
+position = Vector2( 35, 32 )
+scale = Vector2( 0.0896739, 0.0873894 )
+texture = ExtResource( 9 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button10"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button10"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button11" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3"]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="BundoKanduangSumateraBarat-removebg-preview-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button11"]
+position = Vector2( 35, 34 )
+scale = Vector2( 0.0964109, 0.084008 )
+texture = ExtResource( 15 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button11"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button11"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button12" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3"]
+margin_left = 222.0
+margin_right = 292.0
+margin_bottom = 70.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 12 )
+
+[node name="CeleMaluku-removebg-preview" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button12"]
+position = Vector2( 35, 35 )
+scale = Vector2( 0.105, 0.089 )
+texture = ExtResource( 14 )
+
+[node name="beli" type="Button" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button12"]
+margin_left = 12.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "50"
+icon = ExtResource( 19 )
+align = 0
+
+[node name="kunci" type="Sprite" parent="Panel/VBoxBaju1/HBoxContainerAchievement3/Button12"]
+position = Vector2( 33.9999, 34 )
+scale = Vector2( 0.096, 0.088 )
+texture = ExtResource( 21 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 301.0
+margin_top = 206.0
+margin_right = 325.0
+margin_bottom = 226.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 7 )
+
+[node name="CoinBar" type="Control" parent="."]
+margin_left = 284.0
+margin_top = -4.0
+margin_right = 349.0
+margin_bottom = 25.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CoinBar"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="CoinBar/HBoxContainer"]
+margin_right = 32.0
+margin_bottom = 40.0
+texture = ExtResource( 23 )
+
+[node name="TextureRect2" type="TextureRect" parent="CoinBar/HBoxContainer"]
+margin_left = 32.0
+margin_right = 64.0
+margin_bottom = 40.0
+texture = ExtResource( 22 )
+
+[node name="TextureRect" type="TextureRect" parent="CoinBar"]
+margin_left = 19.0
+margin_top = 7.0
+margin_right = 35.0
+margin_bottom = 23.0
+texture = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="CoinBar"]
+margin_left = 37.0
+margin_top = 10.0
+margin_right = 64.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "0"
+
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button" to="Panel/VBoxBaju1" method="_on_Button_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button2" to="Panel/VBoxBaju1" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button2/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button3" to="Panel/VBoxBaju1" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button3/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button4" to="Panel/VBoxBaju1" method="_on_Button4_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement/Button4/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button5" to="Panel/VBoxBaju1" method="_on_Button5_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button5/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button6" to="Panel/VBoxBaju1" method="_on_Button6_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button6/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button7" to="Panel/VBoxBaju1" method="_on_Button7_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button7/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button8" to="Panel/VBoxBaju1" method="_on_Button8_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement2/Button8/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button9" to="Panel/VBoxBaju1" method="_on_Button9_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button9/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button10" to="Panel/VBoxBaju1" method="_on_Button10_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button10/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button11" to="Panel/VBoxBaju1" method="_on_Button11_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button11/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button12" to="Panel/VBoxBaju1" method="_on_Button12_pressed"]
+[connection signal="pressed" from="Panel/VBoxBaju1/HBoxContainerAchievement3/Button12/beli" to="." method="_on_beli_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

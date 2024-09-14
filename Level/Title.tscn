@@ -1,0 +1,499 @@
+[gd_scene load_steps=62 format=2]
+
+[ext_resource path="res://Level/TilesetPadat.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/Palm Tree Island/Background/BG Image.png" type="Texture" id=2]
+[ext_resource path="res://assets/Palm Tree Island/Background/Big Clouds.png" type="Texture" id=3]
+[ext_resource path="res://assets/Palm Tree Island/Background/Additional Sky.png" type="Texture" id=4]
+[ext_resource path="res://Level/TombolPopUp.tres" type="StyleBox" id=5]
+[ext_resource path="res://Level/VBoxTittle.gd" type="Script" id=6]
+[ext_resource path="res://Level/TombolFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/8.png" type="Texture" id=8]
+[ext_resource path="res://assets/Folks-Normal.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/Palm Tree Island/Background/Small Cloud 1.png" type="Texture" id=10]
+[ext_resource path="res://assets/Palm Tree Island/Back Palm Trees/Back Palm Tree Left 01.png" type="Texture" id=11]
+[ext_resource path="res://assets/Palm Tree Island/Back Palm Trees/Back Palm Tree Regular 01.png" type="Texture" id=12]
+[ext_resource path="res://assets/Palm Tree Island/Front Palm Trees/Front Palm Tree Top 01.png" type="Texture" id=13]
+[ext_resource path="res://assets/Palm Tree Island/Back Palm Trees/Back Palm Tree Right 01.png" type="Texture" id=14]
+[ext_resource path="res://Level/TilesetTembus.tres" type="TileSet" id=15]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png" type="Texture" id=16]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 05.png" type="Texture" id=17]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 03.png" type="Texture" id=18]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 02.png" type="Texture" id=19]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 04.png" type="Texture" id=20]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 01.png" type="Texture" id=21]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 06.png" type="Texture" id=22]
+[ext_resource path="res://Level/FierceToothTitle.gd" type="Script" id=23]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Totems/Head 2/Attack 2/1.png" type="Texture" id=24]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Totems/Head 1/Attack 1/6.png" type="Texture" id=25]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Totems/Head 3/Attack 2/1.png" type="Texture" id=26]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Bite/1.png" type="Texture" id=27]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Bite/2.png" type="Texture" id=28]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Bite/3.png" type="Texture" id=29]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Bite/5.png" type="Texture" id=30]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Bite/6.png" type="Texture" id=31]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Bite/4.png" type="Texture" id=32]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png" type="Texture" id=33]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" type="Texture" id=34]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/02-Run/Run 03.png" type="Texture" id=35]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" type="Texture" id=36]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/02-Run/Run 01.png" type="Texture" id=37]
+[ext_resource path="res://Level/CrabbyTitile.gd" type="Script" id=38]
+[ext_resource path="res://Level/PinkStarTitle.gd" type="Script" id=39]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" type="Texture" id=40]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" type="Texture" id=41]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" type="Texture" id=42]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" type="Texture" id=43]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" type="Texture" id=44]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" type="Texture" id=45]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Cannon/Cannon Idle/1.png" type="Texture" id=46]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 96, 96 )
+margin_left = 17.0
+margin_right = 16.0
+margin_top = 17.0
+margin_bottom = 20.0
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 9 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10, 11 )
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 37 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ), ExtResource( 16 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 34 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 21 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 21 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 22 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 21 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 21 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 22 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 10, 11.5 )
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 44 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 44 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 45 ), ExtResource( 42 ), ExtResource( 43 ) ]
+}
+
+[node name="Title" type="Node2D"]
+
+[node name="BgImage" type="Sprite" parent="."]
+position = Vector2( 170, 191 )
+scale = Vector2( 0.885417, 1 )
+texture = ExtResource( 2 )
+
+[node name="AdditionalSky" type="Sprite" parent="."]
+position = Vector2( 170, 63 )
+scale = Vector2( 10.6094, 4 )
+texture = ExtResource( 4 )
+
+[node name="BigClouds" type="Sprite" parent="."]
+position = Vector2( 183, 97 )
+texture = ExtResource( 3 )
+
+[node name="SmallCloud1" type="Sprite" parent="BigClouds"]
+position = Vector2( 48, -34 )
+texture = ExtResource( 10 )
+
+[node name="SmallCloud2" type="Sprite" parent="BigClouds"]
+position = Vector2( -100, -48 )
+texture = ExtResource( 10 )
+
+[node name="TileMapPadat" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 12, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 7, 0, 11, 14, 0, 65536, 5, 0, 65547, 3, 0, 131072, 5, 0, 131080, 27, 0, 131081, 28, 0, 131082, 28, 0, 131083, 3, 0, 196608, 5, 0, 196619, 3, 0, 262144, 5, 0, 262155, 3, 0, 327680, 5, 0, 327691, 3, 0, 393216, 5, 0, 393227, 3, 0, 458752, 13, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 15, 0 )
+
+[node name="TileMapTembus" type="TileMap" parent="."]
+tile_set = ExtResource( 15 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 393218, 0, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 2, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxTittle" type="VBoxContainer" parent="CanvasLayer"]
+anchor_left = 0.390059
+anchor_top = 0.579167
+anchor_right = 0.404765
+anchor_bottom = 0.579167
+margin_left = -41.62
+margin_top = -29.0
+margin_right = 41.38
+margin_bottom = 26.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Main" type="Button" parent="CanvasLayer/VBoxTittle"]
+margin_right = 88.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 5 )
+text = "Main"
+
+[node name="Keluar" type="Button" parent="CanvasLayer/VBoxTittle"]
+margin_top = 29.0
+margin_right = 88.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 5 )
+text = "Keluar"
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+margin_left = 74.0
+margin_top = 33.0
+margin_right = 208.0
+margin_bottom = 103.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+margin_left = 15.0
+margin_top = 13.0
+margin_right = 128.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Discovering
+Attire and Arms"
+
+[node name="Pohon" type="Node2D" parent="."]
+
+[node name="BackPalmTreeLeft01" type="Sprite" parent="Pohon"]
+position = Vector2( 46, 89 )
+texture = ExtResource( 11 )
+
+[node name="BackPalmTreeRegular01" type="Sprite" parent="Pohon"]
+position = Vector2( 59, 193 )
+texture = ExtResource( 12 )
+
+[node name="BackPalmTreeRight01" type="Sprite" parent="Pohon"]
+position = Vector2( 245, 67 )
+texture = ExtResource( 14 )
+
+[node name="BackPalmTreeRegular02" type="Sprite" parent="Pohon"]
+position = Vector2( 128, 161 )
+texture = ExtResource( 12 )
+
+[node name="BackPalmTreeRegular03" type="Sprite" parent="Pohon"]
+position = Vector2( 184, 161 )
+texture = ExtResource( 12 )
+
+[node name="BackPalmTreeRegular04" type="Sprite" parent="Pohon"]
+position = Vector2( 232, 161 )
+texture = ExtResource( 12 )
+
+[node name="BackPalmTreeRegular05" type="Sprite" parent="Pohon"]
+position = Vector2( 305, 193 )
+texture = ExtResource( 12 )
+
+[node name="FrontPalmTreeTop01" type="Sprite" parent="Pohon"]
+position = Vector2( 103, 178 )
+texture = ExtResource( 13 )
+
+[node name="FrontPalmTreeTop02" type="Sprite" parent="Pohon"]
+position = Vector2( 156, 179 )
+texture = ExtResource( 13 )
+
+[node name="FrontPalmTreeTop03" type="Sprite" parent="Pohon"]
+position = Vector2( 210, 176 )
+texture = ExtResource( 13 )
+
+[node name="FrontPalmTreeTop04" type="Sprite" parent="Pohon"]
+position = Vector2( 256, 178 )
+texture = ExtResource( 13 )
+
+[node name="CrabbyTitile" type="KinematicBody2D" parent="."]
+position = Vector2( 235, 213 )
+collision_layer = 0
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="CrabbyTitile"]
+texture = ExtResource( 37 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyTitile"]
+position = Vector2( 0, 1 )
+shape = SubResource( 11 )
+
+[node name="RayCast2D" type="RayCast2D" parent="CrabbyTitile"]
+position = Vector2( -14, 3 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CrabbyTitile"]
+anims/RESET = SubResource( 12 )
+anims/run = SubResource( 13 )
+
+[node name="FierceToothTitle" type="KinematicBody2D" parent="."]
+position = Vector2( 114, 212 )
+collision_layer = 0
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FierceToothTitle"]
+texture = ExtResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FierceToothTitle"]
+position = Vector2( 1, 2 )
+shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="FierceToothTitle"]
+position = Vector2( -12, 3 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FierceToothTitle"]
+anims/RESET = SubResource( 5 )
+anims/run = SubResource( 6 )
+
+[node name="FierceToothTitle2" type="KinematicBody2D" parent="."]
+position = Vector2( 276, 53 )
+collision_layer = 0
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FierceToothTitle2"]
+texture = ExtResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FierceToothTitle2"]
+position = Vector2( 1, 2 )
+shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="FierceToothTitle2"]
+position = Vector2( -12, 3 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FierceToothTitle2"]
+anims/RESET = SubResource( 7 )
+anims/run = SubResource( 8 )
+
+[node name="Totems" type="Node2D" parent="."]
+
+[node name="6" type="Sprite" parent="Totems"]
+position = Vector2( 41, 166 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 25 )
+
+[node name="8" type="Sprite" parent="Totems"]
+position = Vector2( 48, 47 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 25 )
+
+[node name="3" type="Sprite" parent="Totems"]
+position = Vector2( 46, 209 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 24 )
+
+[node name="2" type="Sprite" parent="Totems"]
+position = Vector2( 49, 187 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 26 )
+
+[node name="7" type="Sprite" parent="Totems"]
+position = Vector2( 327, 166 )
+texture = ExtResource( 25 )
+
+[node name="4" type="Sprite" parent="Totems"]
+position = Vector2( 323, 187 )
+texture = ExtResource( 24 )
+
+[node name="5" type="Sprite" parent="Totems"]
+position = Vector2( 320, 209 )
+texture = ExtResource( 26 )
+
+[node name="Seashell" type="KinematicBody2D" parent="."]
+position = Vector2( 274, 176 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Seashell"]
+frames = SubResource( 9 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Seashell"]
+shape = SubResource( 10 )
+
+[node name="PinkStarTitle" type="KinematicBody2D" parent="."]
+position = Vector2( 176, 211 )
+collision_layer = 0
+script = ExtResource( 39 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PinkStarTitle"]
+texture = ExtResource( 44 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinkStarTitle"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 14 )
+
+[node name="RayCast2D" type="RayCast2D" parent="PinkStarTitle"]
+position = Vector2( -13, 4 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PinkStarTitle"]
+anims/RESET = SubResource( 15 )
+anims/run = SubResource( 16 )
+
+[node name="1" type="Sprite" parent="."]
+position = Vector2( 77, 179 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 46 )
+
+[connection signal="pressed" from="CanvasLayer/VBoxTittle/Main" to="CanvasLayer/VBoxTittle" method="_on_Main_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxTittle/Keluar" to="CanvasLayer/VBoxTittle" method="_on_Keluar_pressed"]

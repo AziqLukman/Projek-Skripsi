@@ -1,0 +1,195 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" type="Texture" id=1]
+[ext_resource path="res://assets/fox/fox1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Idle/1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Cannon/Cannon Idle/1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Folks-Normal.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/9.png" type="Texture" id=6]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 01.png" type="Texture" id=7]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 01.png" type="Texture" id=8]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/1.png" type="Texture" id=9]
+[ext_resource path="res://Level/TombolPopUp.tres" type="StyleBox" id=10]
+[ext_resource path="res://assets/Wood and Paper UI/Sliders/2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Wood and Paper UI/Sliders/1.png" type="Texture" id=12]
+[ext_resource path="res://Level/Tutorial2.gd" type="Script" id=13]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 6 )
+region_rect = Rect2( 13, 15, 103, 100 )
+margin_right = 1.0
+margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 6, 64, 51 )
+margin_left = 7.0
+margin_right = 7.0
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 5 )
+
+[node name="Tutorial2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 13 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel" type="Panel" parent="Panel"]
+anchor_left = 0.294118
+anchor_top = 0.00416667
+anchor_right = 0.682353
+anchor_bottom = 0.1
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+anchor_left = 0.0909091
+anchor_top = 0.130435
+anchor_right = 0.916667
+anchor_bottom = 0.913043
+custom_fonts/font = SubResource( 3 )
+text = "TUTORIAL"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Fox1" type="Sprite" parent="Panel/Panel"]
+position = Vector2( -64.0001, 30 )
+texture = ExtResource( 2 )
+
+[node name="FierceTooth" type="Sprite" parent="Panel/Panel"]
+position = Vector2( -74.0001, 78 )
+texture = ExtResource( 8 )
+
+[node name="Crabby" type="Sprite" parent="Panel/Panel"]
+position = Vector2( -73.0001, 115 )
+texture = ExtResource( 7 )
+
+[node name="Pink Star" type="Sprite" parent="Panel/Panel"]
+position = Vector2( -72.0001, 147 )
+texture = ExtResource( 1 )
+
+[node name="1" type="Sprite" parent="Panel/Panel"]
+position = Vector2( -73.0001, 180 )
+texture = ExtResource( 4 )
+
+[node name="Seashell" type="Sprite" parent="Panel/Panel"]
+position = Vector2( -74.0001, 206 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.158824
+anchor_top = 0.133333
+anchor_right = 1.36765
+anchor_bottom = 0.2625
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Fox : Kemampuannya hanya berlari disepanjang platform 
+yang ditentukan."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label2" type="Label" parent="Panel"]
+anchor_left = 0.152941
+anchor_top = 0.275
+anchor_right = 1.36176
+anchor_bottom = 0.404167
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "FierceTooth : Kemampuannya berjalan dan menggigit saat 
+player mendekatinya."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label3" type="Label" parent="Panel"]
+anchor_left = 0.152941
+anchor_top = 0.425
+anchor_right = 1.36176
+anchor_bottom = 0.554167
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Crabby : Kemampuannya berjalan dan mencapit saat player 
+mendekatinya."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label4" type="Label" parent="Panel"]
+anchor_left = 0.15
+anchor_top = 0.570833
+anchor_right = 1.35882
+anchor_bottom = 0.7
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Pink Star : kemampuannya berjalan, saat mendeteksi player 
+Pink Star menyerang menggelinding kedepan atau ke belakang."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label5" type="Label" parent="Panel"]
+anchor_left = 0.147059
+anchor_top = 0.704167
+anchor_right = 1.35588
+anchor_bottom = 0.833333
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Cannon : Kemampuannya berdiri diam dan menembak kearah 
+tertentu saat player melewatinya."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label6" type="Label" parent="Panel"]
+anchor_left = 0.147059
+anchor_top = 0.8375
+anchor_right = 1.35588
+anchor_bottom = 0.966667
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Seashell: Kemampuannya berdiam dan menembak 
+kearah tertentu saat player melewatinya."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 286.0
+margin_top = 211.0
+margin_right = 304.0
+margin_bottom = 231.0
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 10 )
+icon = ExtResource( 12 )
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 308.0
+margin_top = 211.0
+margin_right = 326.0
+margin_bottom = 231.0
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 10 )
+icon = ExtResource( 11 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

@@ -1,0 +1,203 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://Level/TombolPopUp.tres" type="StyleBox" id=1]
+[ext_resource path="res://assets/Palm Tree Island/Background/BG Image.png" type="Texture" id=2]
+[ext_resource path="res://Level/TilesetPadat.tres" type="TileSet" id=3]
+[ext_resource path="res://assets/Palm Tree Island/Background/Big Clouds.png" type="Texture" id=4]
+[ext_resource path="res://assets/Palm Tree Island/Background/Small Cloud 1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" type="Texture" id=6]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" type="Texture" id=7]
+[ext_resource path="res://assets/Folks-Normal.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" type="Texture" id=9]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" type="Texture" id=10]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" type="Texture" id=11]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 05.png" type="Texture" id=12]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 06.png" type="Texture" id=13]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 07.png" type="Texture" id=14]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 01.png" type="Texture" id=15]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 04.png" type="Texture" id=16]
+[ext_resource path="res://assets/Palm Tree Island/Background/Small Cloud 3.png" type="Texture" id=17]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 02.png" type="Texture" id=18]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 03.png" type="Texture" id=19]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 08.png" type="Texture" id=20]
+[ext_resource path="res://assets/Wood and Paper UI/Sliders/2.png" type="Texture" id=21]
+[ext_resource path="res://assets/Palm Tree Island/Background/Water Reflect Big 01.png" type="Texture" id=22]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/9.png" type="Texture" id=23]
+[ext_resource path="res://assets/Backgrounds/trees.png" type="Texture" id=24]
+[ext_resource path="res://Percakapan/Level1/P2.gd" type="Script" id=25]
+[ext_resource path="res://Percakapan/Level1/BtnP2.gd" type="Script" id=26]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "diam",
+"speed": 7.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 23 )
+region_rect = Rect2( 13, 15, 102, 98 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 10
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 10
+font_data = ExtResource( 8 )
+
+[node name="Storyline2" type="Node"]
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="BgImage" type="Sprite" parent="bg"]
+position = Vector2( 192.5, 149 )
+scale = Vector2( 0.997396, 2.32813 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BigClouds" type="Sprite" parent="bg"]
+modulate = Color( 1, 1, 1, 0.490196 )
+position = Vector2( 223, 119 )
+texture = ExtResource( 4 )
+
+[node name="WaterReflectBig01" type="Sprite" parent="bg"]
+position = Vector2( 128, 211 )
+texture = ExtResource( 22 )
+
+[node name="WaterReflectBig02" type="Sprite" parent="bg"]
+position = Vector2( 318, 215 )
+texture = ExtResource( 22 )
+
+[node name="SmallCloud1" type="Sprite" parent="bg"]
+position = Vector2( 121, 73 )
+texture = ExtResource( 5 )
+
+[node name="SmallCloud2" type="Sprite" parent="bg"]
+position = Vector2( 268, 81 )
+texture = ExtResource( 5 )
+
+[node name="SmallCloud3" type="Sprite" parent="bg"]
+position = Vector2( 181, 129 )
+texture = ExtResource( 17 )
+
+[node name="Trees" type="Sprite" parent="bg"]
+position = Vector2( 198, 214 )
+scale = Vector2( 1.54297, 1 )
+texture = ExtResource( 24 )
+
+[node name="Pajangan" type="Node2D" parent="."]
+
+[node name="FierceTooth" type="KinematicBody2D" parent="Pajangan"]
+position = Vector2( 271, 115 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pajangan/FierceTooth"]
+frames = SubResource( 1 )
+animation = "diam"
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pajangan/FierceTooth"]
+shape = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Pajangan"]
+position = Vector2( 56, 212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pajangan/KinematicBody2D"]
+shape = SubResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pajangan/KinematicBody2D"]
+frames = SubResource( 4 )
+frame = 4
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Pajangan/KinematicBody2D"]
+position = Vector2( 16, -19 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 12, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 14, 0, 65536, 5, 0, 65546, 10, 0, 131072, 5, 0, 131082, 10, 0, 196608, 5, 0, 196618, 11, 0, 262144, 5, 0, 262152, 30, 0, 327680, 5, 0, 393216, 5, 0, 458752, 13, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchor_left = 0.0529412
+anchor_right = 0.611765
+anchor_bottom = 0.204167
+margin_left = 49.0
+margin_top = 148.0
+margin_right = 49.0
+margin_bottom = 148.0
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+margin_top = -10.0
+margin_right = 53.0
+margin_bottom = 4.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Jek"
+
+[node name="P2" type="Label" parent="CanvasLayer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 2.0
+margin_right = -4.00002
+margin_bottom = -7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Mari kita lihat sapa yg akan bertahan, dan aku akan mengambil semua koin"
+autowrap = true
+script = ExtResource( 25 )
+
+[node name="BtnP2" type="Button" parent="CanvasLayer/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -22.0
+margin_right = -2.00002
+margin_bottom = -2.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+icon = ExtResource( 21 )
+script = ExtResource( 26 )

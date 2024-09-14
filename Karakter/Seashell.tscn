@@ -1,0 +1,171 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Hit/3.png" type="Texture" id=2]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Opening/2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Hit/4.png" type="Texture" id=4]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Fire/1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Fire/2.png" type="Texture" id=6]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Fire/3.png" type="Texture" id=7]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Fire/5.png" type="Texture" id=8]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Fire/6.png" type="Texture" id=9]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Hit/1.png" type="Texture" id=10]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Opening/1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Opening/3.png" type="Texture" id=12]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Opening/4.png" type="Texture" id=15]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Opening/5.png" type="Texture" id=22]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Idle/1.png" type="Texture" id=23]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Fire/4.png" type="Texture" id=24]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Seashell/Seashell Hit/2.png" type="Texture" id=26]
+[ext_resource path="res://Karakter/Seashell.gd" type="Script" id=28]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 5 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fire"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 24 ), ExtResource( 8 ), ExtResource( 9 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "tembak"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "hit"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 26 ), ExtResource( 2 ), ExtResource( 4 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "opening"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 22 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "fire"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=12]
+states/fire/node = SubResource( 8 )
+states/fire/position = Vector2( 373, 49 )
+states/idle/node = SubResource( 9 )
+states/idle/position = Vector2( 195, 49 )
+transitions = [ "idle", "fire", SubResource( 10 ), "fire", "idle", SubResource( 11 ) ]
+start_node = "idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[node name="Seashell" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 28 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1, -4 )
+scale = Vector2( 0.583, 0.632 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/fire = SubResource( 4 )
+anims/hit = SubResource( 5 )
+anims/idle = SubResource( 6 )
+anims/opening = SubResource( 7 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 12 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 13 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( -50, 0 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -15, 1 )

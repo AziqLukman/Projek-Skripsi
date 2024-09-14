@@ -1,0 +1,485 @@
+[gd_scene load_steps=55 format=2]
+
+[ext_resource path="res://assets/Folks-Normal.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Level/TombolPopUp.tres" type="StyleBox" id=2]
+[ext_resource path="res://Level/TilesetPadat.tres" type="TileSet" id=3]
+[ext_resource path="res://Level/FierceToothTitle.gd" type="Script" id=4]
+[ext_resource path="res://Level/VBoxMainMenu.gd" type="Script" id=5]
+[ext_resource path="res://Level/TombolFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 04.png" type="Texture" id=7]
+[ext_resource path="res://assets/Palm Tree Island/Background/Additional Sky.png" type="Texture" id=8]
+[ext_resource path="res://assets/Palm Tree Island/Background/BG Image.png" type="Texture" id=9]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 03.png" type="Texture" id=10]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 01.png" type="Texture" id=11]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 05.png" type="Texture" id=12]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 06.png" type="Texture" id=13]
+[ext_resource path="res://assets/Fierce Tooth/02-Run/Run 02.png" type="Texture" id=14]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 01.png" type="Texture" id=15]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 06.png" type="Texture" id=16]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 05.png" type="Texture" id=17]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 08.png" type="Texture" id=18]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 09.png" type="Texture" id=19]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 02.png" type="Texture" id=20]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/12.png" type="Texture" id=21]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 03.png" type="Texture" id=22]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 04.png" type="Texture" id=23]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 07.png" type="Texture" id=24]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" type="Texture" id=25]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" type="Texture" id=26]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" type="Texture" id=27]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" type="Texture" id=28]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" type="Texture" id=29]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" type="Texture" id=30]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" type="Texture" id=31]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" type="Texture" id=32]
+[ext_resource path="res://assets/Palm Tree Island/Front Palm Trees/Front Palm Tree Top 01.png" type="Texture" id=33]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/8.png" type="Texture" id=34]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Totems/Head 2/Attack 2/1.png" type="Texture" id=35]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Totems/Head 1/Attack 1/6.png" type="Texture" id=36]
+[ext_resource path="res://assets/Backgrounds/trees.png" type="Texture" id=37]
+[ext_resource path="res://assets/Shooter Traps/Sprites/Totems/Head 3/Attack 2/1.png" type="Texture" id=38]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 21 )
+region_rect = Rect2( 13, 15, 103, 99 )
+margin_top = 1.0
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 34 )
+region_rect = Rect2( 13, 16, 69, 65 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 11 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 11 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 11 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 11 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 10, 11 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 28 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=16]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 33, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 34, 0, 65536, 10, 0, 65546, 10, 0, 131072, 11, 0, 131074, 30, 0, 131080, 30, 0, 131082, 11, 0, 262145, 27, 0, 262146, 29, 0, 262152, 27, 0, 262153, 29, 0, 458752, 0, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 2, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchor_left = 0.382353
+anchor_top = 0.225
+anchor_right = 0.661765
+anchor_bottom = 0.8
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Panel"]
+margin_left = 15.0
+margin_top = 18.0
+margin_right = 119.0
+margin_bottom = 36.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Main Menu"
+align = 1
+
+[node name="VBoxMainMenu" type="VBoxContainer" parent="CanvasLayer/Panel"]
+anchor_left = 0.22963
+anchor_top = 0.25
+anchor_right = 0.740741
+anchor_bottom = 0.901515
+margin_left = 3.8147e-06
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Level" type="Button" parent="CanvasLayer/Panel/VBoxMainMenu"]
+margin_right = 69.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "Level"
+
+[node name="Tutorial" type="Button" parent="CanvasLayer/Panel/VBoxMainMenu"]
+margin_top = 29.0
+margin_right = 69.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "Tutorial"
+
+[node name="Achievement" type="Button" parent="CanvasLayer/Panel/VBoxMainMenu"]
+margin_top = 58.0
+margin_right = 69.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "Achievement"
+
+[node name="Kembali" type="Button" parent="CanvasLayer/Panel/VBoxMainMenu"]
+margin_top = 87.0
+margin_right = 69.0
+margin_bottom = 112.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "Kembali"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BgImage" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 192, 190 )
+texture = ExtResource( 9 )
+
+[node name="AdditionalSky" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 192, 62.5 )
+scale = Vector2( 12, 3.96875 )
+texture = ExtResource( 8 )
+
+[node name="Trees" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 170, 213 )
+scale = Vector2( 1.32422, 1 )
+texture = ExtResource( 37 )
+
+[node name="FrontPalmTreeTop02" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 314, 209 )
+texture = ExtResource( 33 )
+
+[node name="FrontPalmTreeTop01" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 23, 209 )
+texture = ExtResource( 33 )
+
+[node name="FierceToothTitle" type="KinematicBody2D" parent="."]
+position = Vector2( 97, 215 )
+collision_layer = 0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FierceToothTitle"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FierceToothTitle"]
+position = Vector2( 1, 2 )
+shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="FierceToothTitle"]
+position = Vector2( -12, 3 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FierceToothTitle"]
+anims/RESET = SubResource( 5 )
+anims/run = SubResource( 6 )
+
+[node name="FierceToothTitle2" type="KinematicBody2D" parent="."]
+position = Vector2( 330, 212 )
+collision_layer = 0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FierceToothTitle2"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FierceToothTitle2"]
+position = Vector2( 1, 2 )
+shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="FierceToothTitle2"]
+position = Vector2( -12, 3 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FierceToothTitle2"]
+anims/RESET = SubResource( 7 )
+anims/run = SubResource( 8 )
+
+[node name="FierceToothTitle3" type="KinematicBody2D" parent="."]
+position = Vector2( 288, 118 )
+collision_layer = 0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FierceToothTitle3"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FierceToothTitle3"]
+position = Vector2( 1, 2 )
+shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="FierceToothTitle3"]
+position = Vector2( -12, 3 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FierceToothTitle3"]
+anims/RESET = SubResource( 9 )
+anims/run = SubResource( 10 )
+
+[node name="FierceToothTitle4" type="KinematicBody2D" parent="."]
+position = Vector2( 67, 118 )
+collision_layer = 0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FierceToothTitle4"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FierceToothTitle4"]
+position = Vector2( 1, 2 )
+shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="FierceToothTitle4"]
+position = Vector2( -12, 3 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FierceToothTitle4"]
+anims/RESET = SubResource( 11 )
+anims/run = SubResource( 12 )
+
+[node name="Crabby" type="KinematicBody2D" parent="."]
+position = Vector2( 272, 52 )
+collision_layer = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="Crabby"]
+frames = SubResource( 13 )
+frame = 6
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crabby"]
+position = Vector2( 0, 1 )
+shape = SubResource( 14 )
+
+[node name="PinkStar" type="KinematicBody2D" parent="."]
+position = Vector2( 80, 51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PinkStar"]
+frames = SubResource( 15 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinkStar"]
+shape = SubResource( 16 )
+
+[node name="Totems" type="Node2D" parent="."]
+
+[node name="6" type="Sprite" parent="Totems"]
+position = Vector2( 63, 188 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 36 )
+
+[node name="2" type="Sprite" parent="Totems"]
+position = Vector2( 71, 209 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 38 )
+
+[node name="7" type="Sprite" parent="Totems"]
+position = Vector2( 276, 187 )
+texture = ExtResource( 36 )
+
+[node name="4" type="Sprite" parent="Totems"]
+position = Vector2( 272, 208 )
+texture = ExtResource( 35 )
+
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxMainMenu/Level" to="CanvasLayer/Panel/VBoxMainMenu" method="_on_Level_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxMainMenu/Tutorial" to="CanvasLayer/Panel/VBoxMainMenu" method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxMainMenu/Achievement" to="CanvasLayer/Panel/VBoxMainMenu" method="_on_Achievement_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxMainMenu/Kembali" to="CanvasLayer/Panel/VBoxMainMenu" method="_on_Kembali_pressed"]

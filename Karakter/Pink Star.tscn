@@ -1,0 +1,166 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 03.png" type="Texture" id=1]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" type="Texture" id=2]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 01.png" type="Texture" id=3]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 04.png" type="Texture" id=4]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 02.png" type="Texture" id=5]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 04.png" type="Texture" id=6]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" type="Texture" id=7]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" type="Texture" id=8]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 01.png" type="Texture" id=9]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 02.png" type="Texture" id=10]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 02.png" type="Texture" id=11]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 02.png" type="Texture" id=12]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/04-Fall/Fall 01.png" type="Texture" id=13]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 03.png" type="Texture" id=14]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 04.png" type="Texture" id=15]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 03.png" type="Texture" id=16]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 02.png" type="Texture" id=17]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" type="Texture" id=18]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" type="Texture" id=19]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png" type="Texture" id=20]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png" type="Texture" id=21]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 04.png" type="Texture" id=22]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" type="Texture" id=23]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" type="Texture" id=24]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" type="Texture" id=25]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 03.png" type="Texture" id=26]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 01.png" type="Texture" id=27]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" type="Texture" id=28]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png" type="Texture" id=29]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 03.png" type="Texture" id=30]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 01.png" type="Texture" id=31]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" type="Texture" id=32]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" type="Texture" id=33]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" type="Texture" id=34]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" type="Texture" id=35]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" type="Texture" id=36]
+[ext_resource path="res://Karakter/Pink Star.gd" type="Script" id=37]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 35 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Serang",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "terluka",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "mati",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "jump",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 11 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "anticipation",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "jatuh",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 36 ), ExtResource( 19 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "lari",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 12 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5, 1.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 13, 5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 36.75, 5 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "menghilang"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="Pink Star" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 23
+script = ExtResource( 37 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 2 )
+
+[node name="Pivot" type="Node2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="Pivot"]
+position = Vector2( -13, 1 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+collision_mask = 2
+
+[node name="DeteksiAtas" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeteksiAtas"]
+position = Vector2( 0, -11 )
+shape = SubResource( 3 )
+
+[node name="DeteksiSamping" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeteksiSamping"]
+position = Vector2( 0, 2 )
+shape = SubResource( 4 )
+
+[node name="PlayerDetektor" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetektor"]
+position = Vector2( -51, 5 )
+shape = SubResource( 5 )
+
+[node name="PlayerDetektor2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetektor2"]
+position = Vector2( 51, 5 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/menghilang = SubResource( 6 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="DeteksiAtas" to="." method="_on_DeteksiAtas_body_entered"]
+[connection signal="area_entered" from="DeteksiSamping" to="." method="_on_DeteksiSamping_area_entered"]
+[connection signal="body_entered" from="DeteksiSamping" to="." method="_on_DeteksiSamping_body_entered"]
+[connection signal="body_entered" from="PlayerDetektor" to="." method="_on_PlayerDetektor_body_entered"]
+[connection signal="body_entered" from="PlayerDetektor2" to="." method="_on_PlayerDetektor_body_entered"]

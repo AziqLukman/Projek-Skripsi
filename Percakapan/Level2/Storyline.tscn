@@ -1,0 +1,238 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://assets/Folks-Normal.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Level/TombolPopUp.tres" type="StyleBox" id=2]
+[ext_resource path="res://Level/TilesetPadat.tres" type="TileSet" id=3]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" type="Texture" id=4]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" type="Texture" id=5]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" type="Texture" id=6]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" type="Texture" id=7]
+[ext_resource path="res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" type="Texture" id=8]
+[ext_resource path="res://assets/Palm Tree Island/Background/BG Image.png" type="Texture" id=9]
+[ext_resource path="res://assets/Palm Tree Island/Background/Big Clouds.png" type="Texture" id=10]
+[ext_resource path="res://assets/Palm Tree Island/Background/Small Cloud 1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 05.png" type="Texture" id=12]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 06.png" type="Texture" id=13]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 07.png" type="Texture" id=14]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 01.png" type="Texture" id=15]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 04.png" type="Texture" id=16]
+[ext_resource path="res://Percakapan/Level2/P1.gd" type="Script" id=17]
+[ext_resource path="res://assets/Palm Tree Island/Background/Small Cloud 3.png" type="Texture" id=18]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 02.png" type="Texture" id=19]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 03.png" type="Texture" id=20]
+[ext_resource path="res://assets/Fierce Tooth/01-Idle/Idle 08.png" type="Texture" id=21]
+[ext_resource path="res://assets/Wood and Paper UI/Sliders/2.png" type="Texture" id=22]
+[ext_resource path="res://assets/Captain Clown Nose/Dialogue/Exclamation/Exclamation In 02.png" type="Texture" id=23]
+[ext_resource path="res://assets/Captain Clown Nose/Dialogue/Exclamation/Exclamation Out 02.png" type="Texture" id=24]
+[ext_resource path="res://assets/Palm Tree Island/Background/Water Reflect Big 01.png" type="Texture" id=25]
+[ext_resource path="res://assets/Wood and Paper UI/Prefabs/9.png" type="Texture" id=26]
+[ext_resource path="res://assets/Captain Clown Nose/Dialogue/Exclamation/Exclamation In 01.png" type="Texture" id=27]
+[ext_resource path="res://assets/Captain Clown Nose/Dialogue/Exclamation/Exclamation In 03.png" type="Texture" id=28]
+[ext_resource path="res://assets/Captain Clown Nose/Dialogue/Exclamation/Exclamation Out 01.png" type="Texture" id=29]
+[ext_resource path="res://assets/Backgrounds/trees.png" type="Texture" id=30]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" type="Texture" id=31]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" type="Texture" id=32]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" type="Texture" id=33]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" type="Texture" id=34]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" type="Texture" id=35]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" type="Texture" id=36]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" type="Texture" id=37]
+[ext_resource path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" type="Texture" id=38]
+[ext_resource path="res://Percakapan/Level2/BtnP1.gd" type="Script" id=39]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "diam",
+"speed": 7.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 37 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 26 )
+region_rect = Rect2( 13, 15, 102, 98 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 10
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 10
+font_data = ExtResource( 1 )
+
+[node name="Storyline" type="Node"]
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="BgImage" type="Sprite" parent="bg"]
+position = Vector2( 192.5, 149 )
+scale = Vector2( 0.997396, 2.32813 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BigClouds" type="Sprite" parent="bg"]
+modulate = Color( 1, 1, 1, 0.490196 )
+position = Vector2( 223, 119 )
+texture = ExtResource( 10 )
+
+[node name="WaterReflectBig01" type="Sprite" parent="bg"]
+position = Vector2( 128, 211 )
+texture = ExtResource( 25 )
+
+[node name="WaterReflectBig02" type="Sprite" parent="bg"]
+position = Vector2( 318, 215 )
+texture = ExtResource( 25 )
+
+[node name="SmallCloud1" type="Sprite" parent="bg"]
+position = Vector2( 121, 73 )
+texture = ExtResource( 11 )
+
+[node name="SmallCloud2" type="Sprite" parent="bg"]
+position = Vector2( 268, 81 )
+texture = ExtResource( 11 )
+
+[node name="SmallCloud3" type="Sprite" parent="bg"]
+position = Vector2( 181, 129 )
+texture = ExtResource( 18 )
+
+[node name="Trees" type="Sprite" parent="bg"]
+position = Vector2( 198, 214 )
+scale = Vector2( 1.54297, 1 )
+texture = ExtResource( 30 )
+
+[node name="Pajangan" type="Node2D" parent="."]
+
+[node name="FierceTooth" type="KinematicBody2D" parent="Pajangan"]
+position = Vector2( 298, 85 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pajangan/FierceTooth"]
+frames = SubResource( 1 )
+animation = "diam"
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pajangan/FierceTooth"]
+shape = SubResource( 2 )
+
+[node name="Jek" type="KinematicBody2D" parent="Pajangan"]
+position = Vector2( 25, 212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pajangan/Jek"]
+shape = SubResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pajangan/Jek"]
+frames = SubResource( 5 )
+frame = 4
+playing = true
+
+[node name="PinkStar" type="KinematicBody2D" parent="Pajangan"]
+position = Vector2( 239, 115 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pajangan/PinkStar"]
+shape = SubResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pajangan/PinkStar/CollisionShape2D"]
+frames = SubResource( 9 )
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Pajangan/PinkStar"]
+position = Vector2( 16, -19 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 12, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 14, 0, 65536, 10, 0, 65546, 10, 0, 131072, 10, 0, 131082, 10, 0, 196608, 11, 0, 196617, 27, 0, 196618, 46, 0, 262151, 30, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchor_left = 0.0529412
+anchor_right = 0.591176
+anchor_bottom = 0.166667
+margin_left = 23.0
+margin_top = 83.0
+margin_right = 23.0
+margin_bottom = 83.0
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+margin_top = -10.0
+margin_right = 53.0
+margin_bottom = 4.0
+custom_colors/font_color = Color( 1, 0.392157, 0.392157, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Pink Star"
+
+[node name="P1" type="Label" parent="CanvasLayer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "heyy.. sebaiknya kau lebih hati\" karna disini akan lebih banyak yang akan melawan
+mu"
+autowrap = true
+script = ExtResource( 17 )
+
+[node name="BtnP1" type="Button" parent="CanvasLayer/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -22.0
+margin_right = -2.00002
+margin_bottom = -2.0
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+icon = ExtResource( 22 )
+script = ExtResource( 39 )

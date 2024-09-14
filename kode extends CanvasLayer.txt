@@ -1,0 +1,56 @@
+extends CanvasLayer
+
+export (String, FILE) var file_path
+var file = File.new()
+var dict = {}
+var already_played = false
+onready var popup = get_node("Panel")
+onready var timer = get_node("Timer")
+onready var tween = get_node("Tween")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	read_achievement()
+
+func read_achievement():
+	var text 
+	if file.file_exists("user://achievements.json"):
+		file.open("user://achievements.json", file.READ)
+		text = file.get_as_text()
+		dict.parse_json(text)
+		file.close()
+	else:
+		file.open(file_path, file.READ)
+		text = file.get_as_text()
+		dict.parse_json(text)
+		write_achievement()
+
+func write_achievement():
+	if file.file_exists("user://achievements.json"):
+		file.open("user://achievements.json", file.WRITE)
+		file.store_string(dict.to_json())
+		file.close()
+
+func modify_achievement(achievement, value):
+	if value == 0:
+		dict[achievement].accomplished = 0
+	if dict[achievement].accomplished < dict[achievement].total:
+		dict[achievement].accomplished += value
+		if dict[achievement].accomplished >= dict[achievement].total:
+			popup.get_node("Label2").set_text(dict[achievement].name)
+			_show_popup()
+
+func _show_popup():
+	popup.show()
+	tween.interpolate_property(popup, "rect/pos", popup.get_pos(), popup.get_pos() - 0.5, tween.TRANS_BACK, tween.EASE_OUT)
+	tween.start()
+	timer.start()
+
+func _hide_popup():
+	tween.interpolate_property(popup, "rect/pos", popup.get_pos(), popup.get_pos() + 0.5, tween.TRANS_BACK, tween.EASE_IN)
+	tween.start()
+	yield(tween, "tween_completed")
+	popup.hide()
+
+func _on_Timer_timeout():
+	_hide_popup()
